@@ -1,0 +1,275 @@
+#registrationForm{
+    width: 40%;
+    height: 820px;
+    background-color: white;
+    position: absolute;
+    top: 20% !important;
+    left: 31%;
+    border-radius: 8px;
+    box-shadow: 0px 0px 8px black;
+}
+
+#registrationForm .regflex{
+    width: 100%;
+    height: 550px;
+
+    /* background-color: aqua; */
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-top: 2.5rem !important;
+}
+#registrationForm .regflex .profile{
+    width: 37%;
+    height: 180px;
+    background-color: white;
+}
+
+#registrationForm .regflex .profile .image{
+    width: 90% !important;
+    margin: 0 auto;
+    height: 200px;
+    /* background-color: white; */
+    /* border: 1px solid rgb(131, 131, 131); */
+    margin-bottom: 10px;  
+}
+#registrationForm .regflex .profile p input[type=file]{
+   border: none;
+   background-color: white;
+   width: 180px;
+   height: 50px;
+   margin-left: 10px;
+
+}
+#registrationForm .regflex .profile .image img{
+    width: 100% !important;
+    height: 100% !important;
+    margin: 0 auto;
+    background-color: rgb(194, 194, 194);
+    background-size: contain;
+}
+#registrationForm .regflex .input-box{
+    width: 60%;
+    height: 550px;
+    /* background-color: black; */    
+}
+::placeholder{
+    color: gray;
+}
+#registrationForm .regflex .input-box .r1{
+    width: 100%;
+    height: 45px;
+    margin-top: 0px;
+    /* display: flex; */
+    gap: 10px;
+    /* flex-direction: row; */
+
+}
+
+#registrationForm .regflex .input-box .r1 input{
+
+    width: 94%;
+    height: 42px;
+    border: 0.5px solid rgb(161, 161, 161);
+    border-radius: 2px;
+    transition: all ease-in-out 0.5s;
+    outline: none;
+    color: gray;
+    padding: 8px;
+    
+}
+#registrationForm .regflex .input-box .r1 input:nth-child(even){
+    margin-right: 20px !important;
+}
+
+#registrationForm .regflex .input-box .r1 input:focus{
+    border: 1px solid #3AA5DC;
+}
+
+#registrationForm .regflex .input-box .r2{
+    width: 98%;
+    height: 45px;
+    margin-top: 20px;
+    display: flex;
+    color: gray;
+   
+}
+.r2 input{
+    width: 96%;
+    height: 40px;
+    border: 0.5px solid rgb(161, 161, 161);
+    color: gray !important;
+    padding: 8px;
+    outline: none;
+    transition: all ease-in-out 0.5s;
+}
+.r2 input:focus{
+    border: 1px solid #3AA5DC;
+}
+
+.div{
+    color: red;
+    font-size: 10px;
+}
+
+#registrationForm .regflex .input-box .r4{
+    width: 98%;
+    height: 45px;
+    margin-top: 50px !important;
+    display: flex;
+    color: gray;
+   
+}
+.r4 input{
+    width: 96%;
+    height: 40px;
+    border: 0.5px solid rgb(161, 161, 161);
+    color: gray !important;
+    padding: 8px;
+    outline: none;
+    transition: all ease-in-out 0.5s;
+}
+.r4 input:focus{
+    border: 1px solid #3AA5DC;
+}
+
+#registrationForm .regflex .input-box .r3{
+    width: 100%;
+    height: 40px;
+    /* background-color: yellowgreen; */
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    color: gray;
+   
+}
+#registrationForm .regflex .input-box .r3 input[type=range]{
+    width: 74%;
+    height: 10px;
+    margin-top: 25px;
+    color: gray;
+    border: 0.5px solid rgb(161, 161, 161);
+
+}
+#registrationForm .regflex .input-box .r2 select{
+    width: 97%;
+    height: 35px;
+    margin:3px 0px;
+    border: 0.5px solid rgb(161, 161, 161);
+    padding: 8px;
+    color: gray;
+    transition: all ease-in-out 0.5s;
+    outline: none;
+}
+#registrationForm .regflex .input-box .r2 select:focus{
+    border: 1px solid #3AA5DC;
+}
+#registrationForm .regflex .input-box .hobbies{
+    width: 100%;
+    height: 120px; 
+    margin-top: 1.5rem;
+
+}
+#registrationForm .regflex .input-box .hobbies input{
+    width: 72%;
+    height: 31px;
+    margin-top: 10px;
+    padding: 8px;
+    color: gray;
+    border: 0.5px solid rgb(161, 161, 161);
+    outline: none;
+    transition: all ease-in-out 0.5s;
+    /* border: 0.5px solid rgb(161, 161, 161); */
+}
+#registrationForm .regflex .input-box .hobbies input:focus{
+
+    border: 1px solid #3AA5DC;
+    
+}
+#registrationForm .regflex .input-box .hobbies button{
+    width: 60px;
+    height: 30px;
+    margin: 11px !important;
+    border: none;
+    outline: none;
+    font-size: 17px;
+    color: white;
+    font-weight: 599;
+    background-color: #3AA5DC;
+    cursor: pointer;
+}
+#registrationForm .regflex .input-box .hobbies ul li{
+    list-style: none;
+    font-size: 15px;
+    /* padding: 10px; */
+}
+#registrationForm .regflex .input-box .hobbies ul li i{
+    font-size: 15px;
+    color: #3AA5DC;
+    margin-left: 15px;
+}
+#registrationForm .regflex .input-box .check1{
+    width: 100%;
+    height: 30px;
+    /* background-color:rebeccapurple;  */
+    display: flex;
+    flex-direction: row;
+    margin-top: -1.8rem !important;
+} 
+#registrationForm .regflex .input-box .check1 .checkbox1{
+    width: 20px;
+    margin-top: 0px;
+    /* background: gray; */
+}
+#registrationForm .regflex .input-box .check1 label{
+    width: 200px;
+    /* margin: 10px; */
+    font-size: 15px;
+    margin-left: 12px;
+    color:darkgray;
+}
+#registrationForm .regflex .input-box .subbtn{
+    width: 80%;
+    height: 45px;
+    margin-left: 3rem;
+    margin-top: 1rem;
+
+}
+#registrationForm .regflex .input-box .subbtn button{
+    width: 40%;
+    height: 35px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: darkgray;
+    margin-left: 10px;
+    border: 0.5px solid rgb(185, 185, 185);
+    border-radius: 2px;
+    transition: all ease-in-out 0.5s;
+}
+
+#registrationForm .regflex .input-box .subbtn button:hover{
+    cursor: pointer;
+}
+#registrationForm .regflex .input-box .subbtn button:nth-child(even){
+    width: 40%;
+    height: 35px;
+    margin-left: 2rem;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: white;
+    background-color: #3AA5DC;
+}
+.ng-invalid.ng-touched {
+    width: 100%;
+    height: 30px;
+    /* background-color: aqua; */
+    border-color: red;
+  }
+  .div {
+    color: red;
+  }
+  
+  
+/* Rgister CSS */

@@ -1,0 +1,188 @@
+<form [formGroup]="registrationForm" id="registrationForm">
+    
+    <div class="regflex">
+      <div class="profile">
+        <div style="color: red;" id="photo" style="font-size: 15px;">
+        </div>
+      <div class="image">
+            <img [src]="photo1" alt="profile" >
+      </div>
+      <p>
+        <!-- <label for="photo1">Photo:</label> -->
+        <input type="file" (change)="selectFile($event)" id="photo1" name="photo1" formControlName="photo1">
+      </p>
+      <div [innerHTML]="msg" *ngIf="msg" style="color: red;margin-left: 10px;"></div>
+      <!-- <div *ngIf="photoError" style="color: red;margin-left: 10px;" id="photo" >{{ photoError }}</div>  -->
+
+    </div>
+
+        <div class="input-box">
+            <div class="r1">
+              <input type="text" [(ngModel)]="users.firstName" placeholder="First Name" id="firstName"  formControlName="firstName" name="firstName">
+              <div *ngIf="registrationForm.get('firstName')?.errors?.['invalidFirstName']" class="div">
+                  First name must be alphabetic and not exceed 20 characters.
+              </div>
+              <div  class="div" *ngIf="registrationForm.get('firstName')?.errors?.['required'] && registrationForm.get('firstName')?.touched">
+                  First name is required.
+              </div>
+
+            </div>
+
+            <div class="r4" style="margin-top: 20px !important;">
+            <input type="text" [(ngModel)]="users.lastName" placeholder="Last Name" id="lastName"  formControlName="lastName" name="lastName">
+          </div>
+
+            <!-- <div class="input-field"> -->
+              <!-- <label for="lastName" style="color: white; font-size: 0px;">Last Name</label> -->
+              <!-- <input type="text" placeholder="Last Name" id="lastName"  formControlName="lastName" name="lastName"> -->
+             
+            <!-- </div> -->
+           
+            <div class="r2">
+              <!-- <label for="email" style="color: white; font-size: 0px;">Email</label> -->
+                <input type="email" [(ngModel)]="users.email" placeholder="Email" formControlName="email" name="email" id="email">
+               
+            </div>
+
+            <div class="r2">
+              <!-- <label for="mobile" style="color: white; font-size: 0px;">Mobile</label> -->
+                <input type="text" [(ngModel)]="users.mobile" placeholder="(541) 754-3010" formControlName="mobile" name="mobile" id="mobile" >
+                
+            </div>
+            <div class="r3">
+              <label for="age" class="label" style="margin-top:18px !important; font-size: 17px;">Age: {{ registrationForm.get('age')?.value }}</label>
+              <!-- <input id="age" [(ngModel)]="users.age" type="range" formControlName="age" min="20" max="60" name="age"> -->
+          
+              <input type="range" [(ngModel)]="users.age" formControlName="age" min="20" max="60" name="age" id="age">
+                
+            </div>
+
+            <div class="r2" style="margin-top: 27px;">
+              <!-- <label for="state">State</label> -->
+                <select formControlName="selectedOption" [(ngModel)]="users.selectedOption" name="selectedOption" id="selectedOption" >
+                  <option  disabled selected value="">State</option>
+                  <option>Andhra Pradesh</option>
+                  <option>Arunachal Pradesh</option>
+                  <option>Assam</option>
+
+                  <option>Bihar</option>
+                  <option>Goa</option>
+                  <option>Gujarat</option>
+                  <option>Haryana</option>
+                  <option>Himachal Pradesh</option>
+                  <option>Jharkand</option>
+                  <option>Karnataka</option>
+                  <option>Kerala</option>
+                  <option>Madhya Pradhesh</option>
+                  <option>Maharashtra</option>
+                  <option>Manipur</option>
+                  <option>Nagaland</option>
+                  <option>Odisha</option>
+                  <option>Punjab</option>
+                  <option>Rajasthan</option>
+                  <option>Sikkim</option>
+                  <option>Tamil Nadu</option>
+                  <option>Telangana</option>
+                  <option>Uttar Pradhesh</option>
+                  <option>West Bengol</option>tion>
+                    <option>Odisha</option>
+                </select>
+            
+                
+            </div>
+            <div class="r2" style="margin-top: 15px !important;">
+              <!-- <label for="country" >Country</label> -->
+                <select [(ngModel)]="users.selectedOption1" formControlName="selectedOption1" name="selectedOption1" id="selectedOption1">
+                  <option disabled selected value="">Country</option>
+                  <option>Afghanistan</option>
+                  <option>Algeria</option>
+                  <option>Argentina</option>
+
+                  <option>Australia</option>
+                  <option>Bangladesh</option>
+                  <option>Austria</option>
+                  <option>Antigua and Barbuda</option>
+                  <option>Azerbaijan</option>
+                  <option>China</option>
+                  <option>Bhutan </option>
+                  <option>Belarus</option>
+                  <option>Belize</option>
+                  <option>Belgium</option>
+                  <option>India</option>
+                  <option>Turkey</option>
+                  <option>Uganda</option>
+                  <option>United Kingdom</option>
+                  <option>United States of America</option>
+                  <option>Ukraine</option>
+                  <option>Vietnam</option>
+                  <option>Yemen</option>
+                  <option>Zambia</option>
+                  <option>Zimbabwe</option>
+                </select>
+                
+             </div>
+             
+             
+            <div class="r2" style="margin-top: 5px !important;">
+              <!-- <label for="addressType" style="font-weight: bold;">Address</label> -->
+              <select [(ngModel)]="users.addressType" id="addressType" formControlName="addressType" name="addressType" (change)="onAddressTypeChange($event)" >
+                <option value="" disabled selected>Select Address Type</option>
+                <option value="Home">Home</option>
+                <option value="Company">Company</option>
+              </select>
+            </div>
+
+            <div *ngIf="addressType === 'Home'">
+              <div>
+                <label for="address1"   style="font-weight: bold; font-size:12px !important; color: gray;">Address 1: </label>
+                <input id="address1" [(ngModel)]="users.address1" formControlName="address1" name="address1" style="margin-top: 1.2rem; width: 70%; height: 25px;  border: 1px solid rgb(131, 131, 131); outline: none; margin-left: 3px; padding: 8px; color:gray;">
+              </div>
+              <div>
+                <label for="address2" style="font-weight: bold; font-size:12px !important;color: gray">Address 2: </label>
+                <input id="address2" [(ngModel)]="users.address2" formControlName="address2" name="address2" style="margin-top: 1.2rem; width: 70%; height: 25px;  border: 1px solid rgb(131, 131, 131); outline: none; margin-left: 2px; padding: 8px; color:gray;">
+              </div>
+              </div>
+
+              <div *ngIf="addressType === 'Company'">
+              <div style="margin-top: 5px;">
+                <label for="companyAddress1" style="font-weight: bold; font-size:12px !important; color: gray;" >Company Address 1:</label>
+                <input id="companyAddress1" [(ngModel)]="users.addresscmp1" formControlName="companyAddress1" name="companyAddress1" style="margin-top: 0.3rem; width: 70%; height: 25px;  border: 1px solid rgb(131, 131, 131); outline: none; margin-left: 2px; padding: 8px; color:gray;">
+              </div>
+              <div>
+                <label for="companyAddress2" style="font-weight: bold; font-size:12px !important; color: gray;">Company Address 2:</label>
+                <input id="companyAddress2" [(ngModel)]="users.addresscmp2" formControlName="companyAddress2" name="companyAddress2" style="margin-top: 0.3rem; width: 70%; height: 25px;  border: 1px solid rgb(131, 131, 131); outline: none; margin-left: 2px; padding: 8px; color:gray;">
+              </div>
+              </div>
+
+              <div class="hobbies">
+                <!-- <h3>{{title}}</h3> -->
+                <div class="h">
+                  <input type="text" placeholder="Hobbies" #task >
+                     <button (click)="addTask(task.value)">+</button>
+                </div> 
+                <!-- <div class="h">
+                  <input type="text" [(ngModel)]="users.hobbie" placeholder="Hobbies" #task id="hobbies"  name="task" formControlName="task" >
+                  <button (click)="addTask(task.value)">+</button>
+             </div> -->
+                    <ul *ngFor="let item of list">
+                    <li>{{item.name}}<i class="fa-solid fa-xmark" (click)="removeTask(item.id)"></i></li> 
+                    </ul>
+                    <!-- <ul>
+                      <li *ngFor="let item of list">
+                          {{ item.name }}
+                          <i class="fa-solid fa-xmark" (click)="removeTask(item.id)"></i>
+                      </li>
+                  </ul> -->
+            </div>
+            <div class="check1">
+                <input type="checkbox" id="checkbox">
+                <label>Subscribe to newsletter</label>
+            </div>
+            <div class="subbtn">
+                <button routerLink="/userdata">Cancel</button>
+                <button type="submit" (click)="update()" id="registerForm">Update</button>
+             </div>
+        </div>
+        
+    </div>
+  </form>

@@ -1,0 +1,64 @@
+<div>
+    
+    <div class="userbox" >
+        <div class="ttile-field">
+            <h1>Profile</h1>
+        </div>
+        
+
+        <div class="side">
+            <div class="profile" *ngIf="user">
+            <div class="profilebox">
+                <div class="profimage"> 
+                    <label> {{ user.photo1 }}</label>
+                    <img [src]="user.photo1"  width="150">
+                  
+                    <!-- <div class="image">
+                        <img [src]="url" >
+                  </div>
+                  <p>
+                    
+                    <input type="file" (change)="selectFile($event)" id="photo1" >
+                  </p> -->
+                  <!-- <button (click)="fileInput.click()">Edit Photo</button> 
+                   <input type="file" #fileInput (change)="onFileSelected($event)" >
+               -->
+    
+                </div>
+               <div class="buttons">
+                <div class="profbtn">
+                    <button>Edit Photo</button>
+               </div>
+               <div class="profbtn">
+                <button routerLink="/update/{{user.id}}">Edit Profile</button>
+            </div>
+               </div>
+
+
+            </div>
+        </div>
+
+
+
+
+        <div class="infobox">
+            <div class="des" >
+                <label>I'm {{ user.firstName }} </label>
+                <label> {{ user.lastName }}</label>
+                <label> and I'm above {{ user.age }}  years and </label>
+                <label> you can send your emails to </label><br>
+                <label style="color: blue;">{{ user.email }}.</label>
+                <label> I live in the state of {{ user.selectedOption }}.</label>
+                <label> I like to play {{user.hobbies}}</label>
+                <label> And please send me newsletter.</label>
+                <label> Please reach out to me on my phone number. {{ user.mobile }}</label>
+               
+            </div>
+            <div class="descbtn" style="margin-top:20px !important;">
+                <button>I Agree</button>
+            </div>
+        </div> 
+        </div>
+
+    </div>
+</div>

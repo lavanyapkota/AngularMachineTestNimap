@@ -1,0 +1,123 @@
+
+
+.userbox{
+    width: 70%;
+    height: 400px;
+    position: absolute;
+
+    top: 25%;
+    left: 20%;
+    /* display: flex; */
+    /* background-color: aqua; */
+}
+.side{
+    display: flex;
+}
+.userbox .ttile-field{
+    width: 80%;
+    height: 30px;
+    margin: 2rem;
+    /* background-color: blue; */
+}
+.userbox .ttile-field h1{
+    color: #3AA5DC !important;
+    font-size: 30px;
+
+}
+
+.userbox .profile{
+    width:100%;
+    height: 300px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    /* background-color: black; */
+}
+
+.userbox .profile .profilebox{
+    width: 37%;
+    height: 80px !important;
+    /* background-color:blue; */
+}
+.userbox .profile .profilebox .profimage{
+    width: 230px;
+    height: 230px;
+    margin: 0px 30px;
+    border: 1px solid rgb(245, 245, 245);
+}
+.userbox .profile .profilebox .profimage .image{
+    width: 100% !important;
+    margin: 0 auto;
+    height: 200px;
+    margin-bottom: 10px;  
+}
+
+.buttons{
+    margin-left: 2rem;
+    display: flex;
+    gap: 30px;
+}
+
+
+.userbox .profile .profilebox .profimage .image img{
+    width: 100% !important;
+    height: 93% !important;
+    /* margin: 0 auto; */
+    /* background-color: aqua; */
+    background-size: contain;
+}
+.userbox .profile .profilebox .buttons .profbtn button{
+    width: 100px;
+    height: 40px;
+    
+    margin-top: 20px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    background-color:white;
+    color: #0b75aa;
+    font-weight: 699;
+}
+
+
+.userbox .profile .profilebox .profimage input[type=file]{
+    border: none;
+    background-color: white;
+    width: 180px;
+    height: 50px;
+    margin-left: 10px;
+ 
+ }
+
+.infobox{
+    width: 60%;
+    height: 300px;
+    margin-left: -50% !important; 
+    /* position: absolute;
+   
+    /* background-color: blueviolet; */
+}
+.infobox .des{
+    width: 80%;
+    height: 150px;
+    /* background-color: aliceblue; */
+    padding: 10px;
+}
+.infobox .descbtn button{
+    margin-top: 20px !important;
+    width: 120px;
+    height: 40px;
+    margin: 10px;
+    color: white;
+    border: none;
+    outline: none;
+    font-size: 17px;
+    background-color:#3AA5DC;
+}
+label{
+    font-size: 17px;
+    color: white;
+}
+span{
+    color: blue;
+}
